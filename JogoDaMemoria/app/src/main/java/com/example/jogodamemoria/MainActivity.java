@@ -86,9 +86,6 @@ public class MainActivity extends AppCompatActivity {
             progressBar.setProgress(0);
             isVisivel(parabens, 0);
             isVisivel(memoria, 0);
-            /*Intent intent = new Intent(this, parabensActivity.class);
-            intent.putExtra("Color",collorsList.get(respostaBotao - 1));
-            startActivity(intent);*/
         }
     }
 
@@ -123,7 +120,6 @@ public class MainActivity extends AppCompatActivity {
     public List<Integer> gerarSequencia() {
         Integer[] numeros = new Integer[6];
         Random radom = new Random();
-        //int contador = 0;
         int indice = 0;
 
         while (indice != 6) {
@@ -132,7 +128,6 @@ public class MainActivity extends AppCompatActivity {
             boolean contains = Arrays.asList(numeros).contains(numeroTmp);
 
             if (!contains) {
-                //contador++;
                 numeros[indice] = numeroTmp;
                 indice++;
             }
