@@ -11,3 +11,23 @@ Atividades desenvolvidas no curso de Tecnologia em Sistemas para Internet perten
 
 ## Demonstração
 
+### Sequência correta
+<a href="https://github.com/EvaCosta/MemoryGame/blob/main/Demo/win.gif">
+  <div align="center">
+    <img src="https://github.com/EvaCosta/MemoryGame/blob/main/Demo/win.gif"  width="30%" height="30%">
+  </div>
+</a>
+
+### Utilizando o botão para reiniciar
+<a href="https://github.com/EvaCosta/MemoryGame/blob/main/Demo/restart.gif">
+  <div align="center">
+    <img src="https://github.com/EvaCosta/MemoryGame/blob/main/Demo/restart.gif"  width="30%" height="30%">
+  </div>
+</a>
+
+### Sequência incorreta
+<a href="https://github.com/EvaCosta/MemoryGame/blob/main/Demo/error.gif">
+  <div align="center">
+    <img src="https://github.com/EvaCosta/MemoryGame/blob/main/Demo/error.gif"  width="30%" height="30%">
+  </div>
+</a>
