@@ -1,13 +1,11 @@
 package com.example.jogodamemoria;
 
-import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -24,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public List<Integer> collorsList;
     private ProgressBar progressBar;
     private ConstraintLayout layout;
+    private TextView parabens, memoria, progresso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
         buttonList = new ArrayList<>();
         collorsList = new ArrayList<Integer>();
+        parabens = findViewById(R.id.textViewParabens);
+        memoria = findViewById(R.id.textViewMemoria);
+        progresso = findViewById(R.id.textViewProgress);
+
         sequencia = gerarSequencia();
 
         inicializaObjetos();
@@ -55,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
         collorsList.add(getResources().getColor(R.color.button5));
         collorsList.add(getResources().getColor(R.color.button6));
 
+        //Torna as mensagens de conclusao do jogo invisiveis 0 para visivel, 1 para invisivel
+        isVisivel(parabens,1);
+        isVisivel(memoria,1);
+
     }
 
     public void acaoBotao(View view){
@@ -74,11 +81,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(posicao == 7){
+            progressBar.setVisibility(View.INVISIBLE);
+            progresso.setVisibility(View.INVISIBLE);
             progressBar.setProgress(0);
-            Intent intent = new Intent(this, parabensActivity.class);
+            isVisivel(parabens, 0);
+            isVisivel(memoria, 0);
+            /*Intent intent = new Intent(this, parabensActivity.class);
             intent.putExtra("Color",collorsList.get(respostaBotao - 1));
-            startActivity(intent);
+            startActivity(intent);*/
         }
+    }
+
+    public void isVisivel(TextView mensagem, int auxiliar){
+       if(auxiliar == 0)
+            mensagem.setVisibility(View.VISIBLE);
+        else if(auxiliar == 1)
+            mensagem.setVisibility(View.INVISIBLE);
     }
 
     public void resetarJogo(){
@@ -90,8 +108,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void reiniciar(View view){
+        isVisivel(parabens, 1);
+        isVisivel(memoria, 1);
+        sequencia = gerarSequencia();
         resetarJogo();
-        gerarSequencia();
     }
 
     public void mostrarBotoes(){
@@ -103,16 +123,16 @@ public class MainActivity extends AppCompatActivity {
     public List<Integer> gerarSequencia() {
         Integer[] numeros = new Integer[6];
         Random radom = new Random();
-        int contador = 0;
+        //int contador = 0;
         int indice = 0;
 
-        while (contador != 6) {
+        while (indice != 6) {
 
             int numeroTmp = radom.nextInt(6) + 1;
             boolean contains = Arrays.asList(numeros).contains(numeroTmp);
 
             if (!contains) {
-                contador++;
+                //contador++;
                 numeros[indice] = numeroTmp;
                 indice++;
             }
