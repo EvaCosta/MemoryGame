@@ -34,13 +34,13 @@ public class SalvarDadosActivity extends AppCompatActivity {
 
 
         if(obterDadosJogador(erros,tempo)){
-            //telaRankingTempo();
-            telaRankingErro();
+
+
         }
 
     }
 
-    public void telaRankingErro(){
+    public void telaRankingErro(View view){
         ListView listView = (ListView) findViewById(R.id.lista);
 
         db = new DataBase(this);
@@ -55,6 +55,8 @@ public class SalvarDadosActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, itens);
 
         listView.setAdapter(adapter);
+
+        Button botao= (Button) findViewById(R.id.button);
 
     }
 

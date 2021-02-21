@@ -62,7 +62,7 @@
         app:layout_constraintVertical_bias="0.157" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/button"
         android:layout_width="156dp"
         android:layout_height="63dp"
         android:backgroundTint="#878181"
@@ -71,10 +71,28 @@
         android:insetRight="10dp"
         android:insetBottom="10dp"
         android:onClick="telaRankingTempo"
-        android:text="ALTERNA"
+        android:text="Tempo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.732" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="156dp"
+        android:layout_height="63dp"
+        android:backgroundTint="#878181"
+        android:insetLeft="10dp"
+        android:insetTop="10dp"
+        android:insetRight="10dp"
+        android:insetBottom="10dp"
+        android:onClick="telaRankingErro"
+        android:text="Erro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout"
         app:layout_constraintVertical_bias="0.732" />
