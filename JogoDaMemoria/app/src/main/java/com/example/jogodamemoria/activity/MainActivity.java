@@ -1,14 +1,20 @@
-package com.example.jogodamemoria;
+package com.example.jogodamemoria.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.example.jogodamemoria.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private ConstraintLayout layout;
     private TextView parabens, memoria, progresso;
+    public int contErrors = 0;
+    public Chronometer chronometer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +51,19 @@ public class MainActivity extends AppCompatActivity {
 
         //Definindo as propriedades da barra de progresso
         progressBar.setMax(6);
+
+        chronometer = (Chronometer) findViewById(R.id.chronometer);
+        startChronometer(chronometer);
+    }
+
+    public void startChronometer(View view){
+        //A contagem é reiniciada.
+        chronometer.setBase(SystemClock.elapsedRealtime());
+        chronometer.start();
+    }
+
+    public void pauseChronometer(View view){
+        chronometer.stop();
     }
 
     public void inicializaObjetos(){
@@ -77,16 +98,36 @@ public class MainActivity extends AppCompatActivity {
             progressBar.setProgress(posicao);
             posicao++;
         }else{
+            contErrors++;
+            //Toast.makeText(this,"erros " + contErrors, Toast.LENGTH_LONG).show();
             resetarJogo();
         }
 
         if(posicao == 7){
+            /*  Versão anterior na qual era exibida uma mensagem parabenizando o jogador por ter finalizado o jogo.
+
+                isVisivel(parabens, 0);
+                isVisivel(memoria, 0);
+            */
+
             progressBar.setVisibility(View.INVISIBLE);
             progresso.setVisibility(View.INVISIBLE);
             progressBar.setProgress(0);
-            isVisivel(parabens, 0);
-            isVisivel(memoria, 0);
+            chronometer.stop();
+
+            obterNomeJogador();
+
+            contErrors = 0;
         }
+    }
+
+    public void obterNomeJogador(){
+        Intent intent = new Intent(this, SalvarDadosActivity.class);
+
+        intent.putExtra("Duração", chronometer.getText());
+        intent.putExtra("Erros", String.format("%s",contErrors));
+
+        startActivity(intent);
     }
 
     public void isVisivel(TextView mensagem, int auxiliar){
@@ -108,6 +149,8 @@ public class MainActivity extends AppCompatActivity {
         isVisivel(parabens, 1);
         isVisivel(memoria, 1);
         sequencia = gerarSequencia();
+        contErrors=0;
+        startChronometer(chronometer);
         resetarJogo();
     }
 

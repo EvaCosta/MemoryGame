@@ -5,7 +5,7 @@
     android:id="@+id/fundo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".activity.MainActivity"
     tools:visibility="invisible">
 
     <androidx.gridlayout.widget.GridLayout
@@ -172,10 +172,22 @@
         app:layout_constraintTop_toBottomOf="@+id/gridLayout"
         app:layout_constraintVertical_bias="0.0" />
 
+    <Chronometer
+        android:id="@id/chronometer"
+        android:layout_width="197dp"
+        android:layout_height="61dp"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
     <TextView
         android:id="@+id/textViewMemoria"
         android:layout_width="343dp"
         android:layout_height="175dp"
+        android:textColor="@color/black"
         android:text="Você tem uma boa memória!"
         android:textAlignment="center"
         android:textSize="30sp"
@@ -184,6 +196,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gridLayout"
         app:layout_constraintVertical_bias="0.798" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

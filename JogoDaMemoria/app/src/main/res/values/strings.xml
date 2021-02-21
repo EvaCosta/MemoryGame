@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">JogoDaMemoria</string>
+
+    <string name="titulo_tela_obter_dados_jogador">Gravar Pontuação</string>
+    <string name="confirmar_exclusao">Confirmar Exclusão</string>
+    <string name="dados_exibicao_jogador">\nQtde erros: %s \nTempo decorrido: %s \n\nNome:</string>
+    <string name="mensagem_exclusao">Deseja realmente excluir os dados?</string>
 </resources>

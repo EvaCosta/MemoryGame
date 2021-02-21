@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1554c2f2-537c-411f-958f-76aa67722f6f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/JogoDaMemoria/app/src/main/java/com/example/jogodamemoria/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/JogoDaMemoria/app/src/main/java/com/example/jogodamemoria/MainActivity.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1okOu00U1QGoz7TLsJMCFU3amWX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1554c2f2-537c-411f-958f-76aa67722f6f" name="Default Changelist" comment="" />
+      <created>1613827340373</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613827340373</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1589" y="269" width="824" height="478" key="AndroidCreateResourceDirectoryDialog" timestamp="1613830807303">
+      <screen x="1366" y="0" width="1280" height="1024" />
+    </state>
+    <state x="1589" y="269" width="824" height="478" key="AndroidCreateResourceDirectoryDialog/0.256.1366.768/1366.0.1280.1024@1366.0.1280.1024" timestamp="1613830807303" />
+    <state x="1789" y="255" width="424" height="505" key="FileChooserDialogImpl" timestamp="1613830841683">
+      <screen x="1366" y="0" width="1280" height="1024" />
+    </state>
+    <state x="1789" y="255" width="424" height="505" key="FileChooserDialogImpl/0.256.1366.768/1366.0.1280.1024@1366.0.1280.1024" timestamp="1613830841683" />
+    <state width="619" height="229" key="GridCell.Tab.0.bottom" timestamp="1613830570273">
+      <screen x="0" y="0" width="2646" height="1000" />
+    </state>
+    <state width="619" height="229" key="GridCell.Tab.0.bottom/0.0.2646.1000@0.0.2646.1000" timestamp="1613830570273" />
+    <state width="619" height="229" key="GridCell.Tab.0.center" timestamp="1613830570273">
+      <screen x="0" y="0" width="2646" height="1000" />
+    </state>
+    <state width="619" height="229" key="GridCell.Tab.0.center/0.0.2646.1000@0.0.2646.1000" timestamp="1613830570273" />
+    <state width="619" height="229" key="GridCell.Tab.0.left" timestamp="1613830570272">
+      <screen x="0" y="0" width="2646" height="1000" />
+    </state>
+    <state width="619" height="229" key="GridCell.Tab.0.left/0.0.2646.1000@0.0.2646.1000" timestamp="1613830570272" />
+    <state width="619" height="229" key="GridCell.Tab.0.right" timestamp="1613830570273">
+      <screen x="0" y="0" width="2646" height="1000" />
+    </state>
+    <state width="619" height="229" key="GridCell.Tab.0.right/0.0.2646.1000@0.0.2646.1000" timestamp="1613830570273" />
+  </component>
+</project>
