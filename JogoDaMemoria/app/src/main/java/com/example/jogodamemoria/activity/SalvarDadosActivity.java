@@ -98,6 +98,7 @@ public class SalvarDadosActivity extends AppCompatActivity {
     }
 
     public void limparDados(View view) {
+        db = new DataBase(this);
         // Cria uma tela de dialogo com um botão
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setCancelable(true);
