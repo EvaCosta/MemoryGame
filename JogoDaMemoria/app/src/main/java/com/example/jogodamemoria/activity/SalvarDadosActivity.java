@@ -21,7 +21,6 @@ import com.example.jogodamemoria.modelo.Jogador;
 public class SalvarDadosActivity extends AppCompatActivity {
     private DataBase db;
     private Button button;
-    int escolha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +32,7 @@ public class SalvarDadosActivity extends AppCompatActivity {
         String erros = getIntent().getStringExtra("Erros");
 
 
-        if(obterDadosJogador(erros,tempo)){
-
-
-        }
+        obterDadosJogador(erros,tempo);
 
     }
 
@@ -45,12 +41,11 @@ public class SalvarDadosActivity extends AppCompatActivity {
 
         db = new DataBase(this);
 
-        //Toast.makeText(this, "as -> " + db.all().size(), Toast.LENGTH_LONG).show();
         String[] itens = new String[db.all().size()];
 
         int indice = 0;
         for (Jogador jogador : db.all())
-            itens[indice++] = String.format("Nome: %s - Erros: %s", jogador.getNome(), jogador.getErros());
+            itens[indice++] = String.format("%s - Erros: %s", jogador.getNome(), jogador.getErros());
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, itens);
 
@@ -66,11 +61,9 @@ public class SalvarDadosActivity extends AppCompatActivity {
         db.close();
     }
 
-    public Boolean obterDadosJogador(String erros, String tempo) {
+    public void obterDadosJogador(String erros, String tempo) {
         // Cria uma tela de dialogo com um botão
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-
-        //AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
 
         // Define o titulo da caixa de dialogo
         alertDialog.setTitle(R.string.titulo_tela_obter_dados_jogador);
@@ -96,7 +89,6 @@ public class SalvarDadosActivity extends AppCompatActivity {
         AlertDialog dialog = alertDialog.create();
         dialog.show();
 
-        return true;
     }
 
     public void limparDados(View view) {
@@ -145,12 +137,11 @@ public class SalvarDadosActivity extends AppCompatActivity {
 
         db = new DataBase(this);
 
-        //Toast.makeText(this, "as -> " + db.all().size(), Toast.LENGTH_LONG).show();
         String[] itens = new String[db.all().size()];
 
         int indice = 0;
         for (Jogador jogador : db.all())
-            itens[indice++] = String.format("Nome: %s - Tempo: %s", jogador.getNome(), jogador.getTempo());
+            itens[indice++] = String.format("%s - Tempo: %s", jogador.getNome(), jogador.getTempo());
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, itens);
 
